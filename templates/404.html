@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Short URL not found</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Short URL not found</h1>
+    <p>The link may be expired, mistyped, or no longer available.</p>
+    <p><a href="{{ url_for('index') }}">Create a new short URL</a></p>
+</body>
+</html>

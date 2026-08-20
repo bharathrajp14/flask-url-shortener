@@ -16,7 +16,7 @@ Base = declarative_base()
 class Urls(Base):
     __tablename__ = 'urls'
     id = sa.Column(Integer, primary_key=True)
-    short_url = sa.Column(String(50), nullable=False)
-    original_url = sa.Column(String(200), nullable=False)
+    short_url = sa.Column(String(50), nullable=False, unique=True, index=True)
+    original_url = sa.Column(String(2048), nullable=False)
 
 Base.metadata.create_all(engine)
